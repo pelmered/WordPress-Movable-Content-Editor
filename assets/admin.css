@@ -1,0 +1,7 @@
+
+
+#postdiv.postarea, #postdivrich.postarea { margin:0; }
+#post-status-info { line-height:1.4em; font-size:13px; }
+#product_long_description .inside { margin:2px 6px 6px 6px; }
+#ed_toolbar { display:none; }
+#postdiv #ed_toolbar, #postdivrich #ed_toolbar { display:block; }
