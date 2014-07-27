@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: Better, Editing, Movable, Content Editor, WYSIWYG
 Requires at least: 3.5.1
 Tested up to: 3.9.1
-Stable tag: 1.0.1
+Stable tag: 0.1.0
 
 Ever wanted to have the product data panel on top on the product edit page? Here is your cure!
 
@@ -18,7 +18,7 @@ With this plugin you can move the main editor where you want it, just like the s
 
 1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Go to 'Settings' and then 'Movable Content Editor' to check the post types you want to activate this for.
+3. Go to 'Settings' and then the submenu 'Movable Content Editor' to check the post types you want to activate this for.
 
 == Screenshots ==
 
