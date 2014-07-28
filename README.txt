@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: Better, Editing, Movable, Content Editor, WYSIWYG
 Requires at least: 3.8.1
 Tested up to: 3.9.1
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 
 This plugin makes the main content editor movable with drag and drop.
 
@@ -30,6 +30,8 @@ All development of this plugin occurs on [GitHub](https://github.com/pelmered/Wo
 
 == Changelog ==
 
+= 0.1.2 =
+Added option to set the box header
 
 = 0.1.1 =
 Bugfixes
