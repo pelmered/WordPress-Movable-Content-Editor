@@ -12,7 +12,8 @@ This plugin makes the main content editor movable with drag and drop.
 
 This plugin makes the main content editor movable with drag and drop, just like the other meta boxes, so you can have it where ever you want on the edit page. This idea came while editing WooCommerce products where we wanted the product data on top and the text fields under. This plugins works for any post type and you can esily select witch post types you want to activeate this for.
 
-See the screenshot to see how it looks.
+
+See the [screenshot](http://wordpress.org/plugins/movable-content-editor/screenshots/ "Screenshots of Movable Content Editor") to see how it looks.
 
 = Development =
 
