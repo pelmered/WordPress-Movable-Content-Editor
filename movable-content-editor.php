@@ -10,7 +10,7 @@
  * Plugin Name: Movable Content Editor
  * Plugin URI:  
  * Description: Move the content WYSIWYG editor as a meta box.
- * Version:     0.1.0
+ * Version:     0.1.1
  * Author:      Peter Elmered
  * Author URI:  http://elmered.com
  * Text Domain: woocommerce-pricefiles
@@ -35,7 +35,7 @@ class Movable_Content_Editor
      */
     protected static $instance = null;
 
-    const VERSION = '0.1.0';
+    const VERSION = '0.1.1';
 
     function __construct()
     {
@@ -105,8 +105,10 @@ class Movable_Content_Editor
         foreach($this->plugin_options['use_on_post_type'] AS $type)
         {
             add_meta_box(
-                'product_long_description', 
-                __('Product long description', $this->plugin_slug), 
+                //'product_long_description', 
+                //__('Product long description', $this->plugin_slug), 
+                'custom_post_content_box', 
+                __('Post Content', $this->plugin_slug), 
                 array($this, 'empty_box'), 
                 $type, 'normal', 'high'
             );
@@ -142,6 +144,11 @@ class Movable_Content_Editor
     function enqueue_admin_scripts()
     {
         wp_enqueue_script($this->plugin_slug . '-admin', $this->plugin_url . 'assets/admin.js', array('jquery'), self::VERSION);
+        
+        $options = array( 
+            'editorId' => 'custom_post_content_box',
+        );
+        wp_localize_script( $this->plugin_slug . '-admin', 'movableContentEditorOptions', $options );
     }
     
     
@@ -182,7 +189,7 @@ class Movable_Content_Editor
         
         add_settings_section(
             $this->plugin_slug . '_options', 
-            __('1Movable content editor options', $this->plugin_slug), 
+            __('Movable content editor options', $this->plugin_slug), 
             array($this, 'section_header_callback'), 
             $this->plugin_slug . '_options_section'
         );
@@ -226,9 +233,8 @@ class Movable_Content_Editor
         if ($post_types)
         {
             foreach ($post_types as $slug => $name) {
-                
                 //Only show the post types that have content editor
-                if($_wp_post_type_features[$slug]['editor'] == 1)
+                if(isset($_wp_post_type_features[$slug]['editor']) && $_wp_post_type_features[$slug]['editor'] == 1)
                 {
                     echo '<label class="shipping-method"> ';
                     echo '<span>' . ucfirst(esc_html($name)) . '</span>';
@@ -238,7 +244,7 @@ class Movable_Content_Editor
             }
         }
         
-        echo '<p>' . $args['description'] . '</p>';
+        echo '<p style="clear:both">' . $args['description'] . '</p>';
     }
     
     function donation_button()
