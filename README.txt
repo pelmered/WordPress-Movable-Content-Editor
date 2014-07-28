@@ -14,6 +14,10 @@ Ever wanted to have the product data panel on top on the product edit page? Here
 
 With this plugin you can move the main editor where you want it, just like the short product description. See the screenshot to see how it looks.
 
+= Development =
+
+All development of this plugin occurs on [GitHub](https://github.com/pelmered/WordPress-Movable-Content-Editor "Movable Content Editor on GitHub"). Please help me develop this by forking and sending pull requests.
+
 == Installation ==
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory in your WordPress installation
