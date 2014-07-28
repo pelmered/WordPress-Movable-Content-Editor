@@ -6,13 +6,13 @@ Requires at least: 3.8.1
 Tested up to: 3.9.1
 Stable tag: 0.1.1
 
-Ever wanted to have the product data panel on top on the product edit page? Here is your cure!
+This plugin makes the main content editor movable with drag and drop.
 
 == Description ==
 
-Ever wanted to have the product data panel on top on the product edit page? Here is your cure!
+This plugin makes the main content editor movable with drag and drop, just like the other meta boxes, so you can have it where ever you want on the edit page. This idea came while editing WooCommerce products where we wanted the product data on top and the text fields under. This plugins works for any post type and you can esily select witch post types you want to activeate this for.
 
-With this plugin you can move the main editor where you want it, just like the short product description. See the screenshot to see how it looks.
+See the screenshot to see how it looks.
 
 = Development =
 
