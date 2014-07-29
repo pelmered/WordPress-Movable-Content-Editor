@@ -10,7 +10,7 @@
  * Plugin Name: Movable Content Editor
  * Plugin URI:  
  * Description: Move the content WYSIWYG editor as a meta box.
- * Version:     0.1.4
+ * Version:     0.1.5
  * Author:      Peter Elmered
  * Author URI:  http://elmered.com
  * Text Domain: woocommerce-pricefiles
@@ -35,7 +35,7 @@ class Movable_Content_Editor
      */
     protected static $instance = null;
 
-    const VERSION = '0.1.4';
+    const VERSION = '0.1.5';
 
     function __construct()
     {
@@ -160,9 +160,10 @@ class Movable_Content_Editor
         wp_enqueue_script($this->plugin_slug . '-admin-editor', $this->plugin_url . 'assets/admin.js', array('jquery'), self::VERSION);
         
         $options = array( 
-            'editorId' => 'custom_post_content_box',
+            'editorId'  => 'custom_post_content_box',
+            'titles'    => $this->plugin_options['editor_headers_for_post_types']
         );
-        wp_localize_script( $this->plugin_slug . '-admin-editor', 'movableContentEditorOptions', $options );
+        wp_localize_script( $this->plugin_slug . '-admin-editor', 'movableContentEditor', $options );
     }
     
     function enqueue_admin_options_styles()
@@ -172,6 +173,11 @@ class Movable_Content_Editor
     function enqueue_admin_options_scripts()
     {
         wp_enqueue_script($this->plugin_slug . '-admin-options', $this->plugin_url . 'assets/admin-options.js', array('jquery'), self::VERSION);
+        
+        $options = array( 
+            'titles'    => $this->plugin_options['editor_headers_for_post_types']
+        );
+        wp_localize_script( $this->plugin_slug . '-admin-options', 'movableContentOptions', $options );
     }
     
     
@@ -294,13 +300,15 @@ class Movable_Content_Editor
         {
             foreach( $this->plugin_options['editor_headers_for_post_types'] AS $post_type => $title )
             {
-                echo '<label class="post-type"> <span>'.ucfirst($post_type).'</span>';
+                echo '<label id="post-type-'.$post_type.'" class="post-type"> <span>'.ucfirst($post_type).'</span>';
                 echo '<input type="text" name="movable-content-editor_options[editor_headers_for_post_types]['.$post_type.']" value="'.$title.'">';
                 echo '</label>';
             }
         }
         
-        echo '</div>';        
+        print_r($this->plugin_options);
+        
+        echo '</div>';
     }
     
     function donation_button()
