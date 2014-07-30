@@ -10,7 +10,7 @@
  * Plugin Name: Movable Content Editor
  * Plugin URI:  
  * Description: Move the content WYSIWYG editor as a meta box.
- * Version:     0.1.6
+ * Version:     0.1.7
  * Author:      Peter Elmered
  * Author URI:  http://elmered.com
  * Text Domain: woocommerce-pricefiles
@@ -35,7 +35,7 @@ class Movable_Content_Editor
      */
     protected static $instance = null;
 
-    const VERSION = '0.1.6';
+    const VERSION = '0.1.7';
 
     function __construct()
     {

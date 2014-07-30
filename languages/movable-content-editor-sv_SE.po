@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Movable Content Editor v0.1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-07-30 07:16:33+0000\n"
+"Last-Translator: admin <peter@elmered.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#. translators: plugin header field 'Name'
+#: movable-content-editor.php:0
+#: movable-content-editor.php:190
+#@ movable-content-editor
+msgid "Movable Content Editor"
+msgstr "Flyttbar Innehållsredigerare"
+
+#. translators: plugin header field 'Description'
+#: movable-content-editor.php:0
+#@ movable-content-editor
+msgid "Move the content WYSIWYG editor as a meta box."
+msgstr "Flytta innehållsredigeraren som en meta box."
+
+#. translators: plugin header field 'Author'
+#: movable-content-editor.php:0
+#@ movable-content-editor
+msgid "Peter Elmered"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: movable-content-editor.php:0
+#@ movable-content-editor
+msgid "http://elmered.com"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: movable-content-editor.php:0
+#@ movable-content-editor
+msgid "0.1.5"
+msgstr ""
+
+#: movable-content-editor.php:84
+#@ movable-content-editor
+msgid "Settings"
+msgstr "Inställningar"
+
+#: movable-content-editor.php:118
+#: movable-content-editor.php:244
+#@ movable-content-editor
+msgid "Post Content"
+msgstr "Inläggsinnehåll"
+
+#: movable-content-editor.php:221
+#@ movable-content-editor
+msgid "Movable content editor options"
+msgstr "Alternativ för flyttbar Innehållsredigerare"
+
+#: movable-content-editor.php:228
+#@ movable-content-editor
+msgid "Use on"
+msgstr "Använd på"
+
+#: movable-content-editor.php:233
+#@ movable-content-editor
+msgid "Select the the post types that you want to use this plugin on."
+msgstr "Välj de posttyper som du vill använda det här tillägget på."
+
+#: movable-content-editor.php:239
+#@ movable-content-editor
+msgid "Editor headers"
+msgstr "Redigeringsrubriker"
+
+#: movable-content-editor.php:244
+#, php-format
+#@ movable-content-editor
+msgid "Specify header text for content editor box. Leave empty for default (%s)"
+msgstr "Ange rubriktext för de redigeringsboxarna. Lämna tomt för att använda förvald text (%s)"
+
+#: movable-content-editor.php:250
+#@ movable-content-editor
+msgid "Donate"
+msgstr "Donera"
+
+#: movable-content-editor.php:315
+#@ default
+msgid "If you like or find this plugin useful, please consider donating something."
+msgstr ""
+
