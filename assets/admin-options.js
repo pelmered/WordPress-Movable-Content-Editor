@@ -2,8 +2,6 @@
     "use strict";
     $(function () {
 
-        console.log(movableContentOptions.titles);
-        //$('input:radio[name="' + chkboxName + '"]
         $('#movable-content-editor-specify-post-types input:checkbox').change( function() {
             
             var $this = $(this),
@@ -25,7 +23,6 @@
                     '</label>'
                 ); 
         
-                
             }
             
         });

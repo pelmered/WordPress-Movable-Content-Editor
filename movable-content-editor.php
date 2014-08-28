@@ -175,8 +175,9 @@ class Movable_Content_Editor
         wp_enqueue_script($this->plugin_slug . '-admin-options', $this->plugin_url . 'assets/admin-options.js', array('jquery'), self::VERSION);
         
         $options = array( 
-            'titles'    => $this->plugin_options['editor_headers_for_post_types']
+            'titles'    => array_values(get_post_types())
         );
+        
         wp_localize_script( $this->plugin_slug . '-admin-options', 'movableContentOptions', $options );
     }
     
@@ -296,15 +297,20 @@ class Movable_Content_Editor
         
         echo '<div id="movable-content-editor-specify-titles">';
         
-        if(isset($this->plugin_options['editor_headers_for_post_types']) && !empty($this->plugin_options['editor_headers_for_post_types']))
+        $post_types = $this->get_selected_post_types();
+        
+        if(isset($post_types) && !empty($post_types))
         {
-            foreach( $this->plugin_options['editor_headers_for_post_types'] AS $post_type => $title )
+            foreach( $post_types AS $post_type )
             {
+                $custom_title = ($this->plugin_options['editor_headers_for_post_types'][$post_type] ? $this->plugin_options['editor_headers_for_post_types'][$post_type] : '');
+                
                 echo '<label id="post-type-'.$post_type.'" class="post-type"> <span>'.ucfirst($post_type).'</span>';
-                echo '<input type="text" name="movable-content-editor_options[editor_headers_for_post_types]['.$post_type.']" value="'.$title.'">';
+                echo '<input type="text" name="movable-content-editor_options[editor_headers_for_post_types]['.$post_type.']" value="'.$custom_title.'">';
                 echo '</label>';
             }
         }
+        
 
         echo '</div>';
     }
@@ -347,3 +353,4 @@ if(is_admin())
 {
     Movable_Content_Editor::get_instance();
 }
+
